@@ -1,4 +1,5 @@
-import { User2 } from "lucide-react"
+import { Hint } from "@/components/ui/hint";
+import { HelpCircle, User2 } from "lucide-react"
 
 export const BoardList = () => {
   return (
@@ -15,6 +16,14 @@ export const BoardList = () => {
     <span className="text-xs">
       5 Remaning
     </span>
+    <Hint
+         sideOffset={40}
+         discription={`Fill free to do what you what `}
+         >
+      <HelpCircle
+      className="absolute bottom-2 right-2 h-[14px] w-[14px]"
+      />
+    </Hint>
     </div>
 
     </div>
