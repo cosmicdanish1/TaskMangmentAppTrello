@@ -1,7 +1,7 @@
 "use client";
 
-import { forwardRef } from "react";
-import { useFormState } from "react-dom";
+import { forwardRef, useState } from "react";
+import { useFormState, useFormStatus } from "react-dom";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { cn } from "@/lib/utils";
@@ -36,7 +36,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
 
 }, ref) => {
 
-  const { pending } = useFormState();
+  const { pending }  = useFormStatus();
 
   return (
 
@@ -60,7 +60,8 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
           id={id}
           placeholder={placeholder}
           type={type}
-          disabled={pending || disabled}
+         //some thing
+          disabled={pending  || disabled}
           className={cn(
             "text-sm px-2 py-1 h-7",
             className,
